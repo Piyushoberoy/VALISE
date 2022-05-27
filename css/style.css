@@ -40,6 +40,7 @@ body
     font-weight: normal;
     overflow-x: hidden;
     background-color: var(--white);
+    user-select: none;
 }
 *
 {
@@ -984,6 +985,14 @@ a,a:hover
     font-weight: 300;
     margin: 10px 0 0;
 }
+.counter{
+    text-align: center;
+    color: white;
+}
+.website-counter{
+    font-size: 40px;
+}
+
 /* responsive */
 @media(max-width:991px)
 {

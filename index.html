@@ -578,6 +578,12 @@
   <!-- footer section start -->
   <footer class="footer">
     <div class="container">
+      <div class="counter">
+        <b>
+          <div class="website-counter"></div>
+        </b>
+        Number of Visits
+      </div>
       <div class="row">
         <div class="col-lg-12">
           <p class="copyright-text">&copy; 2022 by Piyush</p>
@@ -589,39 +595,8 @@
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    function sendmail() {
-      var name = $('#name').val();
-      var email = $('#email').val();
-      var phone_number = $('#phone-number').val();
-      var subject = $('#subject').val();
-      var message = $('#message').val();
-      var body = "Sir,<br>We got a mail from "+name+' as:<br>" '+message+' "<br> Contant details:-<br>Phone Number: '+phone_number+"<br>Email: "+email+"<br>Thank You :)";
-      Email.send({
-        SecureToken : "0ae5f624-d2ec-436a-b7f9-4cad2e24e509",
-        To : "ynr24piyush@gmail.com",
-        From : "ynr24genius@gmail.com",
-        Subject : subject,
-        Body : body
-      }).then(
-        message => {
-          if (message == 'OK') {
-            alert('Your mail has been send. Thank you for connecting. Check spam if not in inbox.');
-          }
-          else {
-            console.error(message);
-            alert('There is error at sending message. ')
-          }
-        }
-      );
-    }
-  </script>
-
-
-
-
   <!-- jquery js -->
   <script src="js/jquery.min.js"></script>
   <!-- popper js -->
