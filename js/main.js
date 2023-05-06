@@ -76,6 +76,60 @@ $(document).ready(function () {
 
 })
 
+// RESEARCH CONTROLS
+// var title = document.getElementById("research-title");
+// var desc = document.getElementById("research-desc");
+// var RBack = document.getElementById("RBack");
+// let desc = [
+//     "Content for research 2",
+//     "Altered Content for research 3",
+//     "Modified Content for research 4"
+// ];
+
+// function RDetails()
+// {
+//     RBack.style.display = "block";
+//     title.innerHTML="You pick up the stick. It might be useful for something.";
+//     desc.innerHTML="You feel something on the ground, and you think it's a stick.";
+// }
+// function PRDetails()
+// {
+//     RBack.style.display = "none";
+//     title.innerHTML=title.innerHTML;
+//     desc.innerHTML=desc.innerHTML;
+// }
+
+let pages = document.querySelectorAll('.details');
+let currentPage = 0;
+
+function showNext() {
+    if (currentPage === pages.length - 1) {
+        currentPage = 0;
+    } else {
+        currentPage++;
+    }
+    showPage(currentPage);
+}
+
+function showPrevious() {
+    if (currentPage === 0) {
+        currentPage = pages.length - 1;
+    } else {
+        currentPage--;
+    }
+    showPage(currentPage);
+}
+
+function showPage(index) {
+    pages.forEach(function(page) {
+        page.classList.remove('current');
+    });
+    pages[index].classList.add('current');
+}
+
+title.addEventListener('click', function () { RDetails()});
+
+// EMAIL CONTROLS
 function sendmail() {
     var name = $('#name').val();
     var email = $('#email').val();

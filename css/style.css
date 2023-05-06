@@ -648,6 +648,10 @@ a:hover {
     box-sizing: boreder-box;
     padding: 20px;
     z-index: -1;
+    display: none;
+}
+.card .details.current{
+    display: block;
 }
 
 .filter-btn {
