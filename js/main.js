@@ -162,10 +162,8 @@ console.log(visitCount)
 if (visitCount) {
     visitCount = Number(visitCount) * 1 + 1;
     localStorage.setItem("page_view", visitCount);
-    console.log(visitCount)
 } else {
     visitCount = 1;
     localStorage.setItem("page_view", 1);
-    console.log("ab",visitCount)
 }
 counterContainer.innerHTML = visitCount;
