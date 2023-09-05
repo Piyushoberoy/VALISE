@@ -158,7 +158,6 @@ function sendmail() {
 
 var counterContainer = document.querySelector(".website-counter");
 var visitCount = localStorage.getItem("page_view");
-console.log(visitCount)
 if (visitCount) {
     visitCount = Number(visitCount) * 1 + 1;
     localStorage.setItem("page_view", visitCount);
