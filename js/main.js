@@ -127,7 +127,7 @@ function showPage(index) {
     pages[index].classList.add('current');
 }
 
-title.addEventListener('click', function () { RDetails()});
+// title.addEventListener('click', function () { RDetails()});
 
 // EMAIL CONTROLS
 function sendmail() {
@@ -158,12 +158,14 @@ function sendmail() {
 
 var counterContainer = document.querySelector(".website-counter");
 var visitCount = localStorage.getItem("page_view");
-
+console.log(visitCount)
 if (visitCount) {
     visitCount = Number(visitCount) * 1 + 1;
     localStorage.setItem("page_view", visitCount);
+    console.log(visitCount)
 } else {
     visitCount = 1;
     localStorage.setItem("page_view", 1);
+    console.log("ab",visitCount)
 }
 counterContainer.innerHTML = visitCount;
